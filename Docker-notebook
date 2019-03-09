@@ -1,0 +1,10 @@
+FROM jupyter/pyspark-notebook
+
+ENV JUPYTER_ENABLE_LAB yes
+ENV PYTHONHASHSEED 0
+
+RUN mkdir requirements
+
+ADD ./requirements.txt /
+
+RUN pip install -r /requirements.txt

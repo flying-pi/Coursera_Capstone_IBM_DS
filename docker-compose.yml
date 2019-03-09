@@ -1,0 +1,16 @@
+version: '3.5'
+services:
+
+  notebook:
+    container_name: capstone_notebook
+    image: capstone_notebook:latest
+    volumes:
+      - ${WORKDIR}/src:/home/jovyan/work/src
+      - ${WORKDIR}/data:/home/jovyan/work/data
+    ports:
+      - "4040-4050:4040-4050"
+      - "80:8888"
+    command: start-notebook.sh
+
+volumes:
+  pgs:
