@@ -1,2 +1,5 @@
 numpy
 pandas
+geopy
+folium==0.5.0
+geocoder
